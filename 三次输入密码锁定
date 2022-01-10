@@ -1,0 +1,12 @@
+password = str("admin")  #确定密码是admin
+c=0   #循环
+while c<3:
+    a = input("请输入用户密码")  #输入a的值
+    if a != password:   #如果a的值等于不等于确定的密码
+        print("密码错误")
+    else :  #否则就输出“密码正确”信息
+        print("密码正确")
+        break  #正确后关闭循环
+    c+=1  #继续循环
+if c==3:  #循环两次后
+        print("错误锁定")
