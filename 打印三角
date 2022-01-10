@@ -1,0 +1,2 @@
+for i in range(10):  #循环10行
+    print(" " * (10 - i), "* " *i) 
