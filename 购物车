@@ -1,0 +1,51 @@
+shop = [
+    ["牛奶", 10],
+    ["可乐", 30],
+    ["泡面", 50],
+    ["冰箱", 900],
+    ["热水器", 100],
+    ["面包", 200]
+]
+car = []
+money = 1000
+import random
+
+while True:
+    for i in enumerate(shop):
+        print(i)
+    a = input("请输入商品编号")
+    if a.isdigit():
+        a = int(a)
+        if a < len(shop) and a >= 0:
+            if money >= shop[a][1]:
+                car.append(shop[a])
+                money = money - shop[a][1]
+                paymoney = shop[a][1]
+                print("您的商品已加入购物车，剩余金额为：", money)
+                print("付款金额为", paymoney)
+                print("你现在的余额为", money)
+                mike = (random.randint(0, 2))
+                if mike == 1:
+                    y = 0.8
+                    print("恭喜获得牛奶8折优惠券一张！")
+                    money = money - (shop[0][1] - (shop[a][1] - ((shop[0][1] * y))))
+                    print("你现在的余额为", money)
+                else:
+                    print("没中奖，下次一定", "付款金额：", paymoney)
+                    
+                    print("你的余额为：", money)
+            if paymoney >= 200:
+                print("感谢您的购买！满200返您5块！")
+                money = money + 5
+                print("您现在的余额为", money)
+        else:
+            print("钱不够买个锤锤")
+            print("你现在的金钱数为：", money)
+    elif a == "q" or a == "Q":
+        print("退出")
+        print("你的余额为：",money)
+        for i in enumerate(car):
+            print(i)
+        break
+    else:
+        print("范围超出")
