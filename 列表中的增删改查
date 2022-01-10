@@ -1,0 +1,11 @@
+list_name = ["北京","上海","广东"]
+list_name.append("石家庄")#添加”石家庄”至列表中
+list_name.append("郑州")#添加“郑州至列表中
+list_name.remove("广东")#删除列表中的”广东“
+list_name.insert(1,"广东")#把广东增添到上海前面
+list_name[3]="唐山"#更改列表中石家庄为唐山
+
+
+
+
+print(list_name)
