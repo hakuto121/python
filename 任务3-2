@@ -1,0 +1,40 @@
+a = [["罗恩",23,35,44],
+     ["哈利",60,77,68,88,90],
+     ["赫敏",97,99,89,91,95,90],
+     ["马尔福",100,85,90]]
+s1 = 0
+for i in a[:1]:
+    if type(i) is list:
+        for j in i:
+            if type(j) is int:
+                s1 += j
+    elif type(i) is int:
+        s1 += i
+print("罗恩的成绩为：",s1)
+s2 = 0
+for i in a[1:2]:
+    if type(i) is list:
+        for j in i:
+            if type(j) is int:
+                s2 += j
+    elif type(i) is int:
+        s2 += i
+print("哈利的成绩为：",s2)
+s3 = 0
+for i in a[2:3]:
+    if type(i) is list:
+        for j in i:
+            if type(j) is int:
+                s3 += j
+    elif type(i) is int:
+        s3 += i
+print("赫敏的成绩为：",s3)
+s4 = 0
+for i in a[3:4]:
+    if type(i) is list:
+        for j in i:
+            if type(j) is int:
+                s4 += j
+    elif type(i) is int:
+        s4 += i
+print("马尔福的成绩为：",s4)
