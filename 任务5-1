@@ -1,0 +1,9 @@
+import random
+a = list()
+a = [random.randint(20,100) for i in range(1000)]
+st = set(a)
+for i in st:
+    print(i,'出现的次数为：',a.count(i))
+# 随机生成1000个整数;
+# 数字范围[20,100];
+# 输出所有不同的数字及其每个数字重复的次数
